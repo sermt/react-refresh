@@ -1,3 +1,9 @@
 .post {
   background-color: blue;
 }
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: #e5d5f7;
+}
