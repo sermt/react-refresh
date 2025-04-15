@@ -1,11 +1,17 @@
-import Post from "./components/Post";
-import Timer from "./components/Timer";
+import React from "react";
+import MainHeader from "./components/MainHeader";
+import PostsList from "./components/PostsList";
 
 function App() {
+  const [isModalVisible, setIsModalVisible] = React.useState(false);
+
   return (
     <>
-      <Timer />
-      <Post author={"Mike"} content={"No data available"} />
+      <MainHeader onCreatePost={setIsModalVisible} />
+      <PostsList
+        isModalVisible={isModalVisible}
+        setIsModalVisible={setIsModalVisible}
+      />
     </>
   );
 }
